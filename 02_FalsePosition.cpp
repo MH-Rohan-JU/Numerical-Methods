@@ -7,7 +7,7 @@ double f(double x) { return x * x - x - 2; }
 
 int main() {
     double x1, x2, x0, E;
-    int maximumIterations = 20;
+    int maximumIterations = 30;
 
     cout << "Enter 2 initial guesses [x1, x2]: ";
     cin >> x1 >> x2;
@@ -21,7 +21,7 @@ int main() {
 
     cout << endl;
     for (int i = 0; i < maximumIterations; i++) {
-        x0 = x2 - (f(x2) * (x2 - x1)) / (f(x2) - f(x1));
+        x0 = x1 - (f(x1) * (x2 - x1)) / (f(x2) - f(x1));
 
         cout << "After " << i + 1 << " iterations, Approximate Root(x0): " << x0
              << endl;
